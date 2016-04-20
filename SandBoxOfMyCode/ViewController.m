@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <ContactsUI/CNContactViewController.h>
 #import <ContactsUI/CNContactPickerViewController.h>
+
 @interface ViewController ()
 
 @end
@@ -29,6 +30,7 @@
     
     NSString *Urlstring = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLUserAllowedCharacterSet]];
     
+    NSLog(@"%@",Urlstring);
     
     
     
