@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 
+#import <Security/Security.h>
+#import "KeychainItemWrapper.h"
+
 @interface AppDelegate ()
+
+@property(nullable, nonatomic,readonly,strong) NSUUID      *identifierForVendor;
+@property (readonly, copy) NSString *UUIDString;
 
 @end
 
@@ -18,6 +24,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}
+
++ (NSString *)UUID {
+    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"HuangyibiaoAppID" accessGroup:@"com.huangyibiao.test.group"];
+    NSString *UUID = [wrapper objectForKey:(__bridge id)kSecValueData];
+    
+    if (UUID.length == 0) {
+        UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        [wrapper setObject:UUID forKey:(__bridge id)kSecValueData];
+    }
+    
+    return UUID;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

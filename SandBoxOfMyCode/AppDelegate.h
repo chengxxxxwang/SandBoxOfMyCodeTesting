@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Foundation/Foundation.h>
+
+@class KeychainItemWrapper, DetailViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
