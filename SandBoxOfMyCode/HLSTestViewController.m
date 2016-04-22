@@ -17,7 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+
+    //TODO: 准备一个视频流文件进行播放测试
+    
+    //TODO: 测试全景视频播放 单眼模式
+    
+    //TODO: 完成双眼模式播放
 }
+
+
+//FIXME: 双眼模式播放 视察并不能实现3D效果
+
+//!!!: 可以 double 视频录制 6*2 模式
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
