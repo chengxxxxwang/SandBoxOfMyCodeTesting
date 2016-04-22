@@ -5,7 +5,7 @@
 //  Created by chenxingwang on 16/4/8.
 //  Copyright © 2016年 chenxingwang. All rights reserved.
 //
-
+#import "AppDelegate.h"
 #import "ViewController.h"
 #import <ContactsUI/CNContactViewController.h>
 #import <ContactsUI/CNContactPickerViewController.h>
@@ -21,9 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
 //    CNContactPickerViewController
-    
-    
-    
+        
     
     NSString *string = @"hahahaha";
     

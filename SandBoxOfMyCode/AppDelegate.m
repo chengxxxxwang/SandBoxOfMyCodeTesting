@@ -23,11 +23,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+
+//    NSLog(@"%@",[self UUID]);
+    
     return YES;
 }
 
 + (NSString *)UUID {
-    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"HuangyibiaoAppID" accessGroup:@"com.huangyibiao.test.group"];
+    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"MyAppID" accessGroup:@"com.papatv.www.SandBoxOfMyCode"];
     NSString *UUID = [wrapper objectForKey:(__bridge id)kSecValueData];
     
     if (UUID.length == 0) {
