@@ -43,7 +43,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
+//    cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"hello"];
+    
     // Configure the cell...
+    
+    cell.textLabel.highlightedTextColor = [UIColor redColor];
     
     return cell;
 }
