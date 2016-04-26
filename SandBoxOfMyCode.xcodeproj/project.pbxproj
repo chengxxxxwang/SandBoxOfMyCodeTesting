@@ -11,6 +11,7 @@
 		472CD5191CC8EFF000E6F0BC /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 472CD5181CC8EFF000E6F0BC /* KeychainItemWrapper.m */; };
 		4748BB811CCE311800E528BC /* UIBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4748BB801CCE311800E528BC /* UIBundle.bundle */; };
 		47816DF21CCA9DF70033038D /* HLSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47816DF11CCA9DF70033038D /* HLSTestViewController.m */; };
+		4797756B1CCF00E0008CC591 /* myData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4797756A1CCF00E0008CC591 /* myData.plist */; };
 		47A113D51CC9F9E200BAD96A /* MyTableViewControllerTest_01.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A113D41CC9F9E200BAD96A /* MyTableViewControllerTest_01.m */; };
 		47E111C01CB74A0800BCC6D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E111BF1CB74A0800BCC6D3 /* main.m */; };
 		47E111C31CB74A0800BCC6D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E111C21CB74A0800BCC6D3 /* AppDelegate.m */; };
@@ -45,6 +46,7 @@
 		4748BB801CCE311800E528BC /* UIBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UIBundle.bundle; sourceTree = "<group>"; };
 		47816DF01CCA9DF70033038D /* HLSTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSTestViewController.h; sourceTree = "<group>"; };
 		47816DF11CCA9DF70033038D /* HLSTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSTestViewController.m; sourceTree = "<group>"; };
+		4797756A1CCF00E0008CC591 /* myData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myData.plist; sourceTree = "<group>"; };
 		47A113D31CC9F9E200BAD96A /* MyTableViewControllerTest_01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewControllerTest_01.h; sourceTree = "<group>"; };
 		47A113D41CC9F9E200BAD96A /* MyTableViewControllerTest_01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewControllerTest_01.m; sourceTree = "<group>"; };
 		47E111BB1CB74A0800BCC6D3 /* SandBoxOfMyCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandBoxOfMyCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				47A113D41CC9F9E200BAD96A /* MyTableViewControllerTest_01.m */,
 				47816DF01CCA9DF70033038D /* HLSTestViewController.h */,
 				47816DF11CCA9DF70033038D /* HLSTestViewController.m */,
+				4797756A1CCF00E0008CC591 /* myData.plist */,
 				47E111C71CB74A0800BCC6D3 /* Main.storyboard */,
 				47E111CA1CB74A0800BCC6D3 /* Assets.xcassets */,
 				47E111CC1CB74A0800BCC6D3 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4797756B1CCF00E0008CC591 /* myData.plist in Resources */,
 				47E111CE1CB74A0800BCC6D3 /* LaunchScreen.storyboard in Resources */,
 				47E111CB1CB74A0800BCC6D3 /* Assets.xcassets in Resources */,
 				47E111C91CB74A0800BCC6D3 /* Main.storyboard in Resources */,
