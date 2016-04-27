@@ -15,6 +15,9 @@
 		4797756F1CCF433C008CC591 /* SandBoxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4797756D1CCF433C008CC591 /* SandBoxTableViewCell.m */; };
 		479775701CCF433C008CC591 /* SandBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4797756E1CCF433C008CC591 /* SandBoxTableViewCell.xib */; };
 		47A113D51CC9F9E200BAD96A /* MyTableViewControllerTest_01.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A113D41CC9F9E200BAD96A /* MyTableViewControllerTest_01.m */; };
+		47B2FDE61CD08F48000009DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B2FDE51CD08F48000009DF /* AVFoundation.framework */; };
+		47B2FDE81CD08F52000009DF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B2FDE71CD08F52000009DF /* AVKit.framework */; };
+		47B2FDEB1CD08FAD000009DF /* THCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B2FDEA1CD08FAD000009DF /* THCameraController.m */; };
 		47E111C01CB74A0800BCC6D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E111BF1CB74A0800BCC6D3 /* main.m */; };
 		47E111C31CB74A0800BCC6D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E111C21CB74A0800BCC6D3 /* AppDelegate.m */; };
 		47E111C61CB74A0800BCC6D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E111C51CB74A0800BCC6D3 /* ViewController.m */; };
@@ -54,6 +57,10 @@
 		4797756E1CCF433C008CC591 /* SandBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SandBoxTableViewCell.xib; sourceTree = "<group>"; };
 		47A113D31CC9F9E200BAD96A /* MyTableViewControllerTest_01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewControllerTest_01.h; sourceTree = "<group>"; };
 		47A113D41CC9F9E200BAD96A /* MyTableViewControllerTest_01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewControllerTest_01.m; sourceTree = "<group>"; };
+		47B2FDE51CD08F48000009DF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		47B2FDE71CD08F52000009DF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		47B2FDE91CD08FAD000009DF /* THCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCameraController.h; sourceTree = "<group>"; };
+		47B2FDEA1CD08FAD000009DF /* THCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCameraController.m; sourceTree = "<group>"; };
 		47E111BB1CB74A0800BCC6D3 /* SandBoxOfMyCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandBoxOfMyCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E111BF1CB74A0800BCC6D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47E111C11CB74A0800BCC6D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B2FDE81CD08F52000009DF /* AVKit.framework in Frameworks */,
+				47B2FDE61CD08F48000009DF /* AVFoundation.framework in Frameworks */,
 				1D89D632AE11D9CD42D7A911 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +140,8 @@
 				472CD5181CC8EFF000E6F0BC /* KeychainItemWrapper.m */,
 				47E111C11CB74A0800BCC6D3 /* AppDelegate.h */,
 				47E111C21CB74A0800BCC6D3 /* AppDelegate.m */,
+				47B2FDE91CD08FAD000009DF /* THCameraController.h */,
+				47B2FDEA1CD08FAD000009DF /* THCameraController.m */,
 				47E111C41CB74A0800BCC6D3 /* ViewController.h */,
 				47E111C51CB74A0800BCC6D3 /* ViewController.m */,
 				47A113D31CC9F9E200BAD96A /* MyTableViewControllerTest_01.h */,
@@ -179,6 +190,8 @@
 		BB4FF5D3D92760383B2459F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47B2FDE71CD08F52000009DF /* AVKit.framework */,
+				47B2FDE51CD08F48000009DF /* AVFoundation.framework */,
 				EA323176812B524107A8FC5B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -377,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B2FDEB1CD08FAD000009DF /* THCameraController.m in Sources */,
 				47816DF21CCA9DF70033038D /* HLSTestViewController.m in Sources */,
 				4797756F1CCF433C008CC591 /* SandBoxTableViewCell.m in Sources */,
 				472CD5191CC8EFF000E6F0BC /* KeychainItemWrapper.m in Sources */,
