@@ -1,10 +1,13 @@
 PODS:
   - IQKeyboardManager (4.0.0)
+  - TMCache (2.1.0)
 
 DEPENDENCIES:
   - IQKeyboardManager (~> 4.0.0)
+  - TMCache (~> 2.1.0)
 
 SPEC CHECKSUMS:
   IQKeyboardManager: b91928f7927ba55a5829b4dcf4b7a6736ac9fc22
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
 COCOAPODS: 0.39.0

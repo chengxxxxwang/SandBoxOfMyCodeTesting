@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TMCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -22,7 +27,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17BA9304BBD30327354E0002F305E612</key>
+		<key>22DA012A0C807BBEC0B66F7333D75D7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E75482C4B9B88ECAD6E6C9E52A8AA81</key>
 		<dict>
 			<key>primary</key>
 			<true/>

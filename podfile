@@ -1,1 +1,2 @@
 pod 'IQKeyboardManager', '~> 4.0.0'
+pod 'TMCache', '~> 2.1.0'
