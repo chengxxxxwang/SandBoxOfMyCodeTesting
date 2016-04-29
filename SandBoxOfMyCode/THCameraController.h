@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-
+/**
+ *  @author chenxingwang, 16-04-29 10:04:14
+ *
+ *  test note
+ */
 
 @interface THCameraController : AVCaptureSession
 
