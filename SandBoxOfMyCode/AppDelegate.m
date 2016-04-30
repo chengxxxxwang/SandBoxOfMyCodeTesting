@@ -41,6 +41,14 @@
         [wrapper setObject:UUID forKey:(__bridge id)kSecValueData];
     }
     
+    
+    /**
+     *  @author chenxingwang, 16-04-30 09:04:38
+     *
+     *  Description
+     */
+    
+    
     return UUID;
 }
 
