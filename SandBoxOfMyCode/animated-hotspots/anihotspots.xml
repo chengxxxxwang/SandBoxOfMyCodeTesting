@@ -8,7 +8,7 @@
     
     <include url="webvr.xml" />
     <plugin name="WebVR" mobilevr_fake_support="true" />
-<!--    <include url="contextmenu.xml" />-->
+    <include url="contextmenu.xml" />
 
 <!--    <preview url="外部-Lpreview.jpg" />-->
 <!--    -->
@@ -61,13 +61,31 @@
 	</action>
 
 
-	<!-- example hotspots -->
-	<hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="-15" atv="-12" onclick="looktohotspot(get(name),65)" />
-	<hotspot name="spot2" url="animatedhotspot_black.png" onloaded="do_crop_animation(64,64, 60);"   ath="+15" atv="+12" onclick="looktohotspot(get(name),65)" />
-	<hotspot name="spot3" url="explosion.png"             onloaded="do_crop_animation(100,100, 60)"  ath="calc:random*90- 45" atv="calc:random*60 - 30" zoom="true" enabled="false" onlastframe="calc(ath, random*90-45);calc(atv, random*60-30);" />
-	<hotspot name="spot4" url="circle.png"                onloaded="do_crop_animation(102,102, 60)"  ath="0" atv="0" enabled="false" />
-	<hotspot name="spot5" url="target.png"                onloaded="do_crop_animation(128,128, 60);" ath="+15" atv="-12" onclick="looktohotspot(get(name),65)" scale="0.40" zoom="true" />
-	<hotspot name="spot6" url="waves.png"                 onloaded="do_crop_animation(128,128, 15);" ath="0"   atv="-12" onclick="looktohotspot(get(name),65)" scale="0.25" zoom="true" />
-	<hotspot name="spot7" url="arrow.png"                 onloaded="do_crop_animation(64,64, 60);"   ath="-15" atv="+12" onclick="looktohotspot(get(name),65)" />
+    <style name="animatedpot1"
+                url="animatedhotspot_white.png"
+                distorted="true"
+                onloaded="do_crop_animation(64,64, 60);"
+            />
+
+
+    <hotspot name="spot_1"
+                style="animatedpot1"
+                ath="180"
+                atv="0"
+                depth="1000"
+                enabled="true"
+                onclick=""
+                
+/>
+
+<!-- example hotspots -->
+<hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="-15" atv="-12" onclick="looktohotspot(get(name),65)" />
+<hotspot name="spot2" url="animatedhotspot_black.png" onloaded="do_crop_animation(64,64, 60);"   ath="+15" atv="+12" onclick="looktohotspot(get(name),65)" />
+<hotspot name="spot3" url="explosion.png"             onloaded="do_crop_animation(100,100, 60)"  ath="calc:random*90- 45" atv="calc:random*60 - 30" zoom="true" enabled="false" onlastframe="calc(ath, random*90-45);calc(atv, random*60-30);" />
+<hotspot name="spot4" url="circle.png"                onloaded="do_crop_animation(102,102, 60)"  ath="0" atv="0" enabled="false" />
+<hotspot name="spot5" url="target.png"                onloaded="do_crop_animation(128,128, 60);" ath="+15" atv="-12" onclick="looktohotspot(get(name),65)" scale="0.40" zoom="true" />
+<hotspot name="spot6" url="waves.png"                 onloaded="do_crop_animation(128,128, 15);" ath="0"   atv="-12" onclick="looktohotspot(get(name),65)" scale="0.25" zoom="true" />
+<hotspot name="spot7" url="arrow.png"                 onloaded="do_crop_animation(64,64, 60);"   ath="-15" atv="+12" onclick="looktohotspot(get(name),65)" />
+
 
 </krpano>
