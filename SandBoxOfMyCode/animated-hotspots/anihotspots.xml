@@ -17,8 +17,41 @@
 <!--        <cube url='外部-%tmobile_%s.jpg' devices='iOS' />-->
 <!--    </image>-->
 
+
+<action name="do_crop_animation">
+    <!-- add attributes to the hotspot -->
+    registerattribute(xframes, calc((imagewidth / %1) BOR 0));
+    registerattribute(yframes, calc((imageheight / %2) BOR 0));
+    registerattribute(frames, calc(xframes * yframes));
+    registerattribute(frame, 0);
     
-	<!-- pano -->
+    set(crop, '0|0|%1|%2');
+    
+    setinterval(calc('crop_anim_' + name), calc(1.0 / %3),
+    if(loaded,
+				inc(frame);
+                if(frame GE frames, if(onlastframe !== null, onlastframe() ); set(frame,0); );
+                mod(xpos, frame, xframes);
+                div(ypos, frame, xframes);
+                Math.floor(ypos);
+                mul(xpos, %1);
+                mul(ypos, %2);
+                calc(crop, xpos + '|' + ypos + '|%1|%2');
+                ,
+                clearinterval(calc('crop_anim_' + name));
+                );
+                );
+</action>
+
+
+<style name="animatedpot1"
+url="animatedhotspot_white.png"
+distorted="true"
+onloaded="do_crop_animation(64,64, 60);"
+/>
+
+
+<!-- pano -->
 	<preview url="preview.jpg" />
 
 	<!-- view settings -->
@@ -35,38 +68,6 @@
 		- the image can be a vertical or horizontal (or both) image-strip / sprite-sheet
 		- the action will loop automatically through all frames from left to right and top to bottom
 	-->
-	<action name="do_crop_animation">
-		<!-- add attributes to the hotspot -->
-		registerattribute(xframes, calc((imagewidth / %1) BOR 0));
-		registerattribute(yframes, calc((imageheight / %2) BOR 0));
-		registerattribute(frames, calc(xframes * yframes));
-		registerattribute(frame, 0);
-
-		set(crop, '0|0|%1|%2');
-
-		setinterval(calc('crop_anim_' + name), calc(1.0 / %3),
-			if(loaded,
-				inc(frame);
-				if(frame GE frames, if(onlastframe !== null, onlastframe() ); set(frame,0); );
-				mod(xpos, frame, xframes);
-				div(ypos, frame, xframes);
-				Math.floor(ypos);
-				mul(xpos, %1);
-				mul(ypos, %2);
-				calc(crop, xpos + '|' + ypos + '|%1|%2');
-			  ,
-				clearinterval(calc('crop_anim_' + name));
-			  );
-		  );
-	</action>
-
-
-    <style name="animatedpot1"
-                url="animatedhotspot_white.png"
-                distorted="true"
-                onloaded="do_crop_animation(64,64, 60);"
-            />
-
 
     <hotspot name="spot_1"
                 style="animatedpot1"
