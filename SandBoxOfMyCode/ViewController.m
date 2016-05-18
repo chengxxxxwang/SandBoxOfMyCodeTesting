@@ -12,6 +12,11 @@
 
 @interface ViewController ()
 
+
+{
+    UIWebView *webView;
+    
+}
 @end
 
 @implementation ViewController
@@ -34,13 +39,46 @@
     
     
     
-    
+    [self layoutLoactionWebView];
     
     
 //    NSString *urlStr = [string ]
 //    NSString *urlStr2 = [@http://v.juhe.cn/weather/index?format=2&cityname=北京&key=88e194ce72b455563c3bed01d5f967c5 stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
 }
+
+
+
+
+- (void) layoutLoactionWebView{
+    
+    self->webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    
+    //    self.webView.frame = self.view.frame;
+    
+    //    CGRect frame = CGRectMake(0, 0, 375, 667);
+    //
+    //    self.webView.frame = frame;
+    
+    [self.view addSubview:self->webView];
+    
+    /**
+     *  @author chenxingwang, 16-05-10 15:05:17
+     *
+     *  加载本地 html
+     */
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"index1"
+                                                     ofType:@"html"];
+    
+    NSURL* url = [NSURL fileURLWithPath:path];
+    
+    NSURLRequest* request = [NSURLRequest requestWithURL:url] ;
+    
+    [webView loadRequest:request];
+    
+}
+
 
 ///Users/chenxingwang/Desktop/SandBoxOfMyCode/SandBoxOfMyCode/ViewController.m:24:26: 'stringByAddingPercentEscapesUsingEncoding:' is deprecated: first deprecated in iOS 9.0 - Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.
 
