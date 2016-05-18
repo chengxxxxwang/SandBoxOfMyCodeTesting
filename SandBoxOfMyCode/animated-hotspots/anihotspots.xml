@@ -5,7 +5,19 @@
 -->
 
 <krpano>
+    
+    <include url="webvr.xml" />
+    <plugin name="WebVR" mobilevr_fake_support="true" />
+<!--    <include url="contextmenu.xml" />-->
 
+<!--    <preview url="外部-Lpreview.jpg" />-->
+<!--    -->
+<!--    <image stereo='true' stereolabels='L|R'>-->
+<!--        <cube url='外部-%tpano_%s.jpg' />-->
+<!--        <cube url='外部-%tmobile_%s.jpg' devices='iOS' />-->
+<!--    </image>-->
+
+    
 	<!-- pano -->
 	<preview url="preview.jpg" />
 
