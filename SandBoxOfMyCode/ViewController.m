@@ -12,6 +12,27 @@
 #import <WebKit/WebKit.h>
 
 
+@interface UINavigationController (Autorotate)
+
+@end
+
+@implementation UINavigationController (Autorotate)
+
+- (BOOL)shouldAutorotate{
+    return [self.topViewController shouldAutorotate];
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return [self.topViewController supportedInterfaceOrientations];
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
+}
+
+@end
+
+
 @interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 
 {
@@ -22,6 +43,9 @@
 @property (nonatomic,strong) WKWebView *wkWebView;
 
 @property (nonatomic, strong) UIProgressView *progressView;
+
+@property (nonatomic,assign ) UIDeviceOrientation myLocation;
+
 
 @end
 
@@ -45,9 +69,9 @@
     
     
     
-//    [self layoutLoactionWebView];
+    [self layoutLoactionWebView];
     
-    [self layoutWKWebView];
+//    [self layoutWKWebView];
     
     
 //    NSString *urlStr = [string ]
@@ -393,6 +417,69 @@
     
     [self presentViewController:alert animated:YES completion:NULL];
 }
+
+
+- (BOOL)shouldAutorotate{
+    //是否允许转屏
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    //viewController所支持的全部旋转方向
+    //        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    
+    //    return  UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    
+    //    /**支持 竖直方向*/
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    //viewController初始显示的方向
+    return UIInterfaceOrientationPortrait;
+}
+
+
+//!!!: 屏幕旋转适配解决
+
+- (void)orientChange:(NSNotification *)notice{
+    
+    NSDictionary* ntfDict = [notice userInfo];
+    
+    NSLog(@"%@",ntfDict);
+    
+    UIDeviceOrientation  oriention = [UIDevice currentDevice].orientation;
+    
+    /*
+     UIDeviceOrientationUnknown,
+     UIDeviceOrientationPortrait,            // Device oriented vertically, home button on the bottom
+     UIDeviceOrientationPortraitUpsideDown,  // Device oriented vertically, home button on the top
+     UIDeviceOrientationLandscapeLeft,       // Device oriented horizontally, home button on the right
+     UIDeviceOrientationLandscapeRight,      // Device oriented horizontally, home button on the left
+     UIDeviceOrientationFaceUp,              // Device oriented flat, face up
+     UIDeviceOrientationFaceDown             // Device oriented flat, face down
+     */
+    
+    if (_myLocation != oriention ) {
+        
+        webView.frame = self.view.frame;
+        
+        
+        self.wkWebView.frame = self.view.frame;
+        
+        self.myLocation = oriention;
+        
+        /**会导致内存警告*/
+        //        [self layoutWebViewFromInternet];
+        
+        
+    }
+    
+    
+}
+
 
 
 @end

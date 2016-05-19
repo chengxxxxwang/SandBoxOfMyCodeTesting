@@ -44,11 +44,11 @@
 </action>
 
 
-<!--<style name="animatedpot1"-->
-<!--url="animatedhotspot_white.png"-->
-<!--distorted="true"-->
-<!--onloaded="do_crop_animation(64,64, 60);"-->
-<!--/>-->
+<style name="animatedpot1"
+url="animatedhotspot_white.png"
+distorted="true"
+onloaded="do_crop_animation(64,64, 60);"
+/>
 
 
 <!-- pano -->
@@ -69,15 +69,15 @@
 		- the action will loop automatically through all frames from left to right and top to bottom
 	-->
 
-<!--    <hotspot name="spot_1"-->
-<!--                style="animatedpot1"-->
-<!--                ath="180"-->
-<!--                atv="0"-->
-<!--                depth="1000"-->
-<!--                enabled="true"-->
-<!--                onclick=""-->
-<!--                -->
-<!--/>-->
+    <hotspot name="spot_1"
+                style="animatedpot1"
+                ath="180"
+                atv="0"
+                depth="1000"
+                enabled="true"
+                onclick=""
+                
+/>
 
 <!-- example hotspots -->
 <hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="-15" atv="-12" onclick="looktohotspot(get(name),65)" />
