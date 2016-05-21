@@ -100,7 +100,7 @@
      *  加载本地 html
      */
     
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"index"
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"index1"
                                                      ofType:@"html"];
     
     NSURL* url = [NSURL fileURLWithPath:path];
