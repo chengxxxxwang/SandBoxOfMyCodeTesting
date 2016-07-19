@@ -19,23 +19,27 @@
 @implementation UINavigationController (Autorotate)
 
 - (BOOL)shouldAutorotate{
+    
     return [self.topViewController shouldAutorotate];
 }
 
 - (NSUInteger)supportedInterfaceOrientations{
+    
     return [self.topViewController supportedInterfaceOrientations];
+    
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    
     return [self.topViewController preferredInterfaceOrientationForPresentation];
+    
 }
 
 @end
 
 
-@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
-
-{
+@interface ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>{
+    
     UIWebView *webView;
     
 }
@@ -79,9 +83,6 @@
 
 }
 
-
-
-
 - (void) layoutLoactionWebView{
     
     self->webView = [[UIWebView alloc] initWithFrame:self.view.frame];
@@ -111,16 +112,12 @@
     
 }
 
-
 ///Users/chenxingwang/Desktop/SandBoxOfMyCode/SandBoxOfMyCode/ViewController.m:24:26: 'stringByAddingPercentEscapesUsingEncoding:' is deprecated: first deprecated in iOS 9.0 - Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 #pragma mark -
 #pragma mark - 二维码生成及保存
